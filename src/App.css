@@ -22,7 +22,7 @@ body {
 }
 .web-header .header-container h1 {
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(237, 237, 237);
+  color: rgba(0, 0, 0, 0.4);
   font-weight: 600;
   font-size: 3rem;
 }
@@ -33,12 +33,17 @@ body {
   justify-content: space-around;
   align-items: center;
   font-family: "Inter", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.6);
 }
 .web-header .header-container .user h2 {
   font-weight: 300;
+  cursor: pointer;
+}
+.web-header .header-container .user h2:hover {
+  opacity: 0.55;
 }
 .web-header .header-container .user button {
+  background-color: rgba(255, 255, 255, 0.6);
   border: none;
   height: 2rem;
   width: 4rem;
@@ -49,7 +54,7 @@ body {
 }
 .web-header .header-container .user button:hover {
   background-color: #4f4b44;
-  color: rgb(180, 180, 180);
+  color: rgb(255, 255, 255);
 }
 
 .cards-container {

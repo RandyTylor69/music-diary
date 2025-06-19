@@ -23,7 +23,7 @@ export default function Cards(props:any){
                 </header>
                 <div className="detail">
                     <h3>Debussy</h3>
-                    <h3>O O O O O</h3>
+                    <h3>July 12 2025</h3>
                 </div>
             </article>
              <article className="card">
