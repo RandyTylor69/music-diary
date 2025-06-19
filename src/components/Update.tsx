@@ -3,7 +3,6 @@
 export default function Update(props: any) {
   return (
     <section className="update">
-
       <article className="sheet-music-challenge">
         <h3>{new Date().getFullYear()} SHEET MUSIC CHALLENGE</h3>
         <div className="challenge-container">
@@ -12,18 +11,31 @@ export default function Update(props: any) {
             <span className="material-symbols-outlined">piano</span>
           </div>
           <div className="para-container">
-            <p> Good job! You have played 3 pieces of music of your goal of 5. 
-                Click the icon on the left to see more details. 
-                </p>
-          <p>progress report: 60%</p>
+            <p>
+              {" "}
+              Good job! You have played 3 pieces of music of your goal of 5.
+              Click the icon on the left to see more details.
+            </p>
+            <p>progress report: 60%</p>
           </div>
-          
         </div>
       </article>
 
       <article className="want-to-play">
         <h3>WANT TO PLAY</h3>
-        <p>You haven't set any new pieces you want to play it.  <br></br><span>Do it here!</span></p>
+        <p>
+          You haven't set any new pieces you want to play yet. <br></br>
+          <span>Do it here!</span>
+        </p>
+      </article>
+
+      <article className="sheet-music-folder">
+        <h3>SHEET MUSIC FOLDER</h3>
+        <div>
+          <p>3 Debussy</p>
+          <p>1 Bach</p>
+          <p>1 Mozart</p>
+        </div>
       </article>
     </section>
   );
