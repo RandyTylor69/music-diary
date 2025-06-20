@@ -12,11 +12,10 @@ export default function Update(props: any) {
           </div>
           <div className="para-container">
             <p>
-              {" "}
-              Good job! You have played 3 pieces of music of your goal of 5.
-              Click the icon on the left to see more details.
+              Good job! You have played {props.cards.length} pieces of music of your goal of 5.
+              Right-click the cards to remove them from the list.
             </p>
-            <p>progress report: 60%</p>
+            <p>progress report: {props.cards.length / 5 * 100}%</p>
           </div>
         </div>
       </article>
