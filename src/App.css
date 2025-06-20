@@ -105,18 +105,15 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 2rem;
   border: none;
-  color: #af8376;
   height: 3rem;
   width: 6rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: 0.3s;
 }
-.cards-container .card .card-header .cardColor2-btn {
-  color: rgb(219, 219, 219);
-}
-.cards-container .card .card-header .cardColor1-btn {
-  color: #8c9181;
+.cards-container .card .card-header button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .cards-container .card .detail {
   color: rgba(0, 0, 0, 0.4);
@@ -136,12 +133,6 @@ body {
 }
 .cards-container .card:hover ~ .card {
   transform: translateY(2rem);
-}
-.cards-container .cardColor2 {
-  background-color: rgb(195, 195, 195);
-}
-.cards-container .cardColor1 {
-  background-color: #8c9181;
 }
 
 .update {
@@ -323,4 +314,11 @@ form button:hover {
 .warning button:hover {
   background-color: rgba(255, 255, 255, 0.4);
   color: white;
+}
+
+.emptyMsg {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgba(0, 0, 0, 0.8);
+  max-width: 30rem;
+  margin: auto;
 }/*# sourceMappingURL=App.css.map */
