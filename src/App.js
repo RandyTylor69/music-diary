@@ -6,12 +6,14 @@ import Greeting from "./components/Greeting.tsx";
 import Update from "./components/Update.tsx";
 
 function App() {
+  
 
   // fecthing data from api
 
   async function getData(){
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-    console.log(response)
+    const response = await fetch('http://localhost:3001/api/imslp?q=mozart')
+    const data = await response.json()
+    console.log(data)
   }
 
   getData()
