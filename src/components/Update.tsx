@@ -37,6 +37,11 @@ export default function Update(props: any) {
           <p>1 Mozart</p>
         </div>
       </article>
+
+      <article className="sheet-music-folder">
+        <h3>Click the log button on the upper right corner?</h3>
+      </article>
+
     </section>
   );
 }

@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header(props:any) {
   return (
     <header className="web-header">
       <div className="header-container">
@@ -8,7 +8,7 @@ export default function Header() {
         <section className="user">
           <h2>SHEETS</h2>
           <h2>LISTS</h2>
-          <button>+LOG</button>
+          <button onClick={props.displayForm}>+LOG</button>
         </section>
       </div>
     </header>
