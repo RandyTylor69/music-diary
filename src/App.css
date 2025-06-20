@@ -321,4 +321,14 @@ form button:hover {
   color: rgba(0, 0, 0, 0.8);
   max-width: 30rem;
   margin: auto;
+}
+.emptyMsg span {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+  font-style: italic;
+}
+.emptyMsg span:hover {
+  text-decoration-color: rgb(232, 232, 232);
 }/*# sourceMappingURL=App.css.map */

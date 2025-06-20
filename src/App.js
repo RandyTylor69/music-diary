@@ -44,6 +44,10 @@ function App() {
     setWarning(false);
   }
 
+  function toggleForm(){
+    setFormDisplay(true)
+  }
+
   function handleSubmit(formData) {
     // create new card object
     const newCard = {
@@ -95,7 +99,7 @@ function App() {
       <Greeting />
 
       {cards.length === 0 ? (
-        <EmtpyMsg />
+        <EmtpyMsg toggleForm = {toggleForm}/>
       ) : (
         <section className="main-section">
           <Cards displayCards={displayCards} deleteCard={deleteCard} />
