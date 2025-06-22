@@ -12,31 +12,31 @@ export default function Update(props: any) {
           </div>
           <div className="para-container">
             <p>
-              Good job! You have played {props.cards.length} pieces of music of your goal of 5.
-              Right-click the cards to remove them from the list.
+              Good job! You have played {props.cards.length} pieces of music of
+              your goal of 5. Right-click the cards to remove them from the
+              list.
             </p>
-            <p>progress report: {props.cards.length / 5 * 100}%</p>
+            <p>progress report: {(props.cards.length / 5) * 100}%</p>
           </div>
         </div>
       </article>
 
       <article className="want-to-play">
         <h3>WANT TO PLAY</h3>
-        <p>
-          You haven't set any new pieces you want to play yet. <br></br>
-          <span>Do it here!</span>
-        </p>
+        {props.wtpPiece !== "" ? (
+          <p>{props.wtpPiece} <br></br> <span onClick={props.WTPForm}>reset</span> / <span onClick={props.markComplete}>mark as complete</span></p>
+        ) : (
+          <p>
+            You haven't set any new pieces you want to play yet. <br></br>
+            <span onClick={props.WTPForm}>Do it here!</span>{" "}
+          </p>
+        )}
       </article>
 
       <article className="sheet-music-folder">
-        <h3>SHEET MUSIC FOLDER</h3>
-        <div>
-          <p>3 Debussy</p>
-          <p>1 Bach</p>
-          <p>1 Mozart</p>
-        </div>
+        <h3>YOUR TOP ARTISTS</h3>
+        <div>{props.displayArtists}</div>
       </article>
-
     </section>
   );
 }

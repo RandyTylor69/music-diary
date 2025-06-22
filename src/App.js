@@ -8,6 +8,7 @@ import Form from "./components/Form.tsx";
 import { Colors } from "./Colors.js";
 import Warning from "./components/Warning.tsx";
 import EmtpyMsg from "./components/EmptyMsg.tsx";
+import WTP from "./components/WTP.tsx";
 
 function App() {
   // hide form
@@ -30,6 +31,8 @@ function App() {
     },
   ]);
   const [warning, setWarning] = React.useState(false);
+  const [wantToPlay, setWantToPlay] = React.useState(false);
+  const [wtpPiece, setWtpPiece] = React.useState("");
 
   function displayForm() {
     if (cards.length === 5) {
@@ -89,12 +92,40 @@ function App() {
     );
   });
 
-  console.log(cards);
+  // update the sheet music folder (renamed to Your Top Artists)
+
+  const displayArtists = cards.map(card=>{
+    return(
+      <p>
+        {card.artistName}
+      </p>
+    )
+  })
+
+  // update the want to play section
+  function WTPForm(){
+    // hides / displays the form
+    setWantToPlay(prev=>!prev)
+  }
+
+  function toggleWTP(formData) {
+
+    setWtpPiece(formData.get("wtpPiece"))
+    setWantToPlay(prev=>!prev)
+    
+  }
+
+  function markComplete(){
+    setWtpPiece("")
+  }
+
+  console.log(wtpPiece)
 
   return (
     <>
       {warning && <Warning toggleWarning={toggleWarning} />}
       {formDisplay && <Form handleSubmit={handleSubmit} />}
+      {wantToPlay && <WTP toggleWTP = {toggleWTP} WTPForm = {WTPForm}/>}
       <Header displayForm={displayForm} />
       <Greeting />
 
@@ -102,8 +133,15 @@ function App() {
         <EmtpyMsg toggleForm = {toggleForm}/>
       ) : (
         <section className="main-section">
-          <Cards displayCards={displayCards} deleteCard={deleteCard} />
-          <Update cards={cards} />
+          <Cards displayCards={displayCards} 
+            deleteCard={deleteCard} />
+          <Update cards={cards}
+            displayArtists = {displayArtists}
+            WTPForm = {WTPForm}
+            toggleWTP = {toggleWTP}
+            wtpPiece = {wtpPiece}
+            markComplete = {markComplete}
+            />
         </section>
       )}
     </>

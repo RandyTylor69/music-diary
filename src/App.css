@@ -331,4 +331,41 @@ form button:hover {
 }
 .emptyMsg span:hover {
   text-decoration-color: rgb(232, 232, 232);
+}
+
+.wtp-form {
+  height: 14rem;
+  width: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(0.4rem);
+          backdrop-filter: blur(0.4rem);
+  z-index: 9999;
+  position: fixed;
+  margin: auto;
+  border: 2px solid white;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+}
+.wtp-form button {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  cursor: pointer;
+  height: 30%;
+  width: 25%;
+  font-size: 15px;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.wtp-form button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
 }/*# sourceMappingURL=App.css.map */
