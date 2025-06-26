@@ -35,7 +35,9 @@ export default function Update(props: any) {
 
       <article className="sheet-music-folder">
         <h3>YOUR TOP ARTISTS</h3>
-        <div>{props.displayArtists}</div>
+        <div>
+          {props.displayArtists}
+        </div>
       </article>
     </section>
   );

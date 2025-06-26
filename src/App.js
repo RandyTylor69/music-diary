@@ -47,8 +47,8 @@ function App() {
     setWarning(false);
   }
 
-  function toggleForm(){
-    setFormDisplay(true)
+  function toggleForm() {
+    setFormDisplay((prev) => !prev);
   }
 
   function handleSubmit(formData) {
@@ -94,54 +94,55 @@ function App() {
 
   // update the sheet music folder (renamed to Your Top Artists)
 
-  const displayArtists = cards.map(card=>{
-    return(
-      <p>
-        {card.artistName}
-      </p>
-    )
-  })
+  const displayArtists = cards.map((card) => {
+    return (
+      <>
+        <span>{card.artistName}</span>
+        <br></br>
+      </>
+    );
+  });
 
   // update the want to play section
-  function WTPForm(){
+  function WTPForm() {
     // hides / displays the form
-    setWantToPlay(prev=>!prev)
+    setWantToPlay((prev) => !prev);
   }
 
   function toggleWTP(formData) {
-
-    setWtpPiece(formData.get("wtpPiece"))
-    setWantToPlay(prev=>!prev)
-    
+    setWtpPiece(formData.get("wtpPiece"));
+    setWantToPlay((prev) => !prev);
   }
 
-  function markComplete(){
-    setWtpPiece("")
+  function markComplete() {
+    setWtpPiece("");
   }
 
-  console.log(wtpPiece)
+  console.log(wtpPiece);
 
   return (
     <>
       {warning && <Warning toggleWarning={toggleWarning} />}
-      {formDisplay && <Form handleSubmit={handleSubmit} />}
-      {wantToPlay && <WTP toggleWTP = {toggleWTP} WTPForm = {WTPForm}/>}
+      {formDisplay && (
+        <Form handleSubmit={handleSubmit} toggleForm={toggleForm} />
+      )}
+      {wantToPlay && <WTP toggleWTP={toggleWTP} WTPForm={WTPForm} />}
       <Header displayForm={displayForm} />
       <Greeting />
 
       {cards.length === 0 ? (
-        <EmtpyMsg toggleForm = {toggleForm}/>
+        <EmtpyMsg toggleForm={toggleForm} />
       ) : (
         <section className="main-section">
-          <Cards displayCards={displayCards} 
-            deleteCard={deleteCard} />
-          <Update cards={cards}
-            displayArtists = {displayArtists}
-            WTPForm = {WTPForm}
-            toggleWTP = {toggleWTP}
-            wtpPiece = {wtpPiece}
-            markComplete = {markComplete}
-            />
+          <Cards displayCards={displayCards} deleteCard={deleteCard} />
+          <Update
+            cards={cards}
+            displayArtists={displayArtists}
+            WTPForm={WTPForm}
+            toggleWTP={toggleWTP}
+            wtpPiece={wtpPiece}
+            markComplete={markComplete}
+          />
         </section>
       )}
     </>

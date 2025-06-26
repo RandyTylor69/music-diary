@@ -206,15 +206,15 @@ body {
   text-align: left;
   gap: 1rem;
 }
-.update .sheet-music-folder div p {
+.update .sheet-music-folder div span {
   cursor: pointer;
   transition: 0.3s;
 }
-.update .sheet-music-folder div p:hover {
+.update .sheet-music-folder div span:hover {
   text-decoration: underline;
 }
 
-form {
+.log-form {
   height: 22rem;
   width: 40rem;
   top: 50%;
@@ -233,7 +233,19 @@ form {
   align-items: center;
   gap: 20px;
 }
-form input {
+.log-form .form-header {
+  display: flex;
+  justify-content: right;
+  height: 20px;
+  width: 80%;
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+.log-form .form-header h2 {
+  font-weight: 200;
+  cursor: pointer;
+}
+.log-form input {
   background-color: rgba(255, 255, 255, 0.6);
   color: rgba(0, 0, 0, 0.8);
   width: 80%;
@@ -243,16 +255,16 @@ form input {
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 15px;
 }
-form input:focus {
+.log-form input:focus {
   outline: none;
 }
-form input::-moz-placeholder {
+.log-form input::-moz-placeholder {
   font-style: italic;
 }
-form input::placeholder {
+.log-form input::placeholder {
   font-style: italic;
 }
-form button {
+.log-form button {
   border: 2px solid rgba(255, 255, 255, 0.6);
   background-color: transparent;
   cursor: pointer;
@@ -262,7 +274,7 @@ form button {
   color: white;
   transition: 0.3s;
 }
-form button:hover {
+.log-form button:hover {
   background-color: rgba(255, 255, 255, 0.4);
   color: white;
 }
@@ -334,7 +346,7 @@ form button:hover {
 }
 
 .wtp-form {
-  height: 14rem;
+  height: 12rem;
   width: 30rem;
   top: 50%;
   left: 50%;
@@ -354,12 +366,43 @@ form button:hover {
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(255, 255, 255, 0.9);
 }
+.wtp-form .form-header {
+  display: flex;
+  justify-content: right;
+  height: 20px;
+  width: 80%;
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+.wtp-form .form-header h2 {
+  font-weight: 200;
+  cursor: pointer;
+}
+.wtp-form input {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.8);
+  width: 80%;
+  height: 20%;
+  border: none;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 15px;
+}
+.wtp-form input:focus {
+  outline: none;
+}
+.wtp-form input::-moz-placeholder {
+  font-style: italic;
+}
+.wtp-form input::placeholder {
+  font-style: italic;
+}
 .wtp-form button {
   border: 2px solid rgba(255, 255, 255, 0.6);
   background-color: transparent;
   cursor: pointer;
-  height: 30%;
-  width: 25%;
+  height: 20%;
+  width: 50%;
   font-size: 15px;
   color: white;
   font-size: 20px;
