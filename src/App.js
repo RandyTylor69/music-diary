@@ -92,17 +92,6 @@ function App() {
     );
   });
 
-  // update the sheet music folder (renamed to Your Top Artists)
-
-  const displayArtists = cards.map((card) => {
-    return (
-      <>
-        <span>{card.artistName}</span>
-        <br></br>
-      </>
-    );
-  });
-
   // update the want to play section
   function WTPForm() {
     // hides / displays the form
@@ -118,7 +107,32 @@ function App() {
     setWtpPiece("");
   }
 
-  console.log(wtpPiece);
+  // update Top Artists section
+
+  const topArtists = [];
+
+  cards.forEach((card) => {
+    // find occurences
+    const occurences = cards.filter(
+      (item) => item.artistName === card.artistName
+    ).length;
+    if (!topArtists.some((item) => item.name === card.artistName)) {
+      topArtists.push({
+        name: card.artistName,
+        count: occurences,
+      });
+    }
+  });
+
+
+  const displayArtists = topArtists.map((artist) => {
+    return (
+      <>
+        <span>{artist.name} {`(${artist.count})`}</span>
+        <br></br>
+      </>
+    );
+  });
 
   return (
     <>

@@ -200,17 +200,17 @@ body {
 .update .want-to-play span:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-.update .sheet-music-folder {
+.update .top-artists {
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 1rem;
 }
-.update .sheet-music-folder div span {
+.update .top-artists div span {
   cursor: pointer;
   transition: 0.3s;
 }
-.update .sheet-music-folder div span:hover {
+.update .top-artists div span:hover {
   text-decoration: underline;
 }
 
