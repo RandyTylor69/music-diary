@@ -1,8 +1,8 @@
 export default function Greeting(props:any){
     return(
         <h1 className="greeting">
-            Try hover over things that interests you. <br></br>
-            The sheet music presented are mysterious and important.
+            You can interact with the demo below. <br></br>
+            <span>Sign up</span> to interact with other users, and see their uploads!
         </h1>
     )
 }

@@ -29,7 +29,7 @@ body {
 }
 .web-header .header-container .user {
   display: flex;
-  width: 20rem;
+  width: 25rem;
   height: 2rem;
   justify-content: space-around;
   align-items: center;
@@ -62,6 +62,14 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: rgba(255, 255, 255, 0.6);
   margin: 5rem 0;
+}
+.greeting span {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.2s all;
+}
+.greeting span:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .main-section {

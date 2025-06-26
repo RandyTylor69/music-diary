@@ -11,7 +11,6 @@ import EmtpyMsg from "./components/EmptyMsg.tsx";
 import WTP from "./components/WTP.tsx";
 
 function App() {
-  // hide form
   const [formDisplay, setFormDisplay] = React.useState(false);
   const [cards, setCards] = React.useState([
     {
@@ -33,6 +32,8 @@ function App() {
   const [warning, setWarning] = React.useState(false);
   const [wantToPlay, setWantToPlay] = React.useState(false);
   const [wtpPiece, setWtpPiece] = React.useState("");
+
+  // LOG - IN - FORM
 
   function displayForm() {
     if (cards.length === 5) {
@@ -124,11 +125,12 @@ function App() {
     }
   });
 
-
   const displayArtists = topArtists.map((artist) => {
     return (
       <>
-        <span>{artist.name} {`(${artist.count})`}</span>
+        <span>
+          {artist.name} {`(${artist.count})`}
+        </span>
         <br></br>
       </>
     );
